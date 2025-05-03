@@ -31,6 +31,7 @@ export function setMovie(movie) {
 
 export function fetchMovie(movieId) {
     return dispatch => {
+        console.log({movieId});
         return fetch(`${env.REACT_APP_API_URL}/movies/${movieId}?reviews=true`, {
             method: 'GET',
             headers: {
